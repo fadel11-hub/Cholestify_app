@@ -4,19 +4,244 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F1F1F3"
+    android:foregroundTint="#F1F1F3"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cholestify"
+                android:textSize="24sp"
+                android:textColor="#4CAF50"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:marginBottom="16dp" />
+
+            <!-- Input Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/inputCholesterol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Input Your Value Cholestrol"
+                    android:backgroundTint="#000000"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/dangerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DANGEROUS"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/warningText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your shouldn't consume cholesterol > 300 mg"
+                    android:textColor="#000000"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Daily Nutrition Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Daily Nutrition"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="100mg\nProtein"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="150mg\nFat"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="20mg\nCarbo"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="98mg\nTotal Cal"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Food Recommendation Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food Recommendation:"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Soup"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ayam"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apel"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Update Daily Food Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I Have eaten!"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="120 Calories"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Soup"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ayam"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apel"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Update Daily Food"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- Daily Food Record Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Food Record"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Karbohidrat: 0, Protein: 0, Sat Fat: 0, Cholesterol: 0"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
