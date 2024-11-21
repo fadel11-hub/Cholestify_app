@@ -8,7 +8,7 @@
     android:foregroundTint="#F1F1F3"
     tools:context=".ui.home.HomeFragment">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F5F5F5"
@@ -208,12 +208,14 @@
                     android:layout_marginTop="8dp" />
 
                 <Button
+                    android:id="@+id/update_daily_food"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Update Daily Food"
+                    android:layout_marginTop="16dp"
                     android:backgroundTint="#4CAF50"
+                    android:text="Update Daily Food"
                     android:textColor="#FFFFFF"
-                    android:layout_marginTop="16dp" />
+                    app:cornerRadius="25dp" />
             </LinearLayout>
 
             <!-- Daily Food Record Section -->
