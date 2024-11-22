@@ -28,8 +28,7 @@
                 android:textSize="24sp"
                 android:textColor="#4CAF50"
                 android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:marginBottom="16dp" />
+                android:layout_gravity="center_horizontal" />
 
             <!-- Input Section -->
             <LinearLayout
@@ -38,8 +37,7 @@
                 android:background="@android:color/white"
                 android:orientation="vertical"
                 android:elevation="4dp"
-                android:padding="16dp"
-                android:marginBottom="16dp">
+                android:padding="16dp">
 
                 <EditText
                     android:id="@+id/inputCholesterol"
@@ -75,8 +73,7 @@
                 android:background="@android:color/white"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical"
-                android:marginBottom="16dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,8 +131,7 @@
                 android:background="@android:color/white"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical"
-                android:marginBottom="16dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -171,8 +167,7 @@
                 android:background="@android:color/white"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical"
-                android:marginBottom="16dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
