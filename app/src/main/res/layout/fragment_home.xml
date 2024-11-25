@@ -6,18 +6,24 @@
     android:layout_height="match_parent"
     android:background="#F1F1F3"
     android:foregroundTint="#F1F1F3"
+    android:fitsSystemWindows="true"
     tools:context=".ui.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F5F5F5"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:paddingBottom="150dp"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:background="#F5F5F5">
+
 
             <!-- Title -->
 
@@ -36,29 +42,41 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:elevation="4dp"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_background">
 
+                <!-- EditText di kiri -->
                 <EditText
                     android:id="@+id/inputCholesterol"
-                    android:layout_width="match_parent"
+                    android:layout_width="248dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:backgroundTint="#000000"
                     android:fontFamily="@font/poppins"
-                    android:hint="Input Your Value Cholestrol"
-                    android:inputType="number" />
+                    android:gravity="center_vertical"
+                    android:hint="Input Your Value"
+                    android:inputType="number"
+                    android:padding="12dp" />
 
+                <!-- Button di kanan dengan drawable -->
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/check"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_background"
                 android:orientation="horizontal"
                 android:elevation="4dp"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
 
                 <!-- Ikon -->
                 <ImageView
@@ -66,7 +84,8 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="12dp"
-                    android:src="@drawable/cardiogram" />
+                    android:src="@drawable/cardiogram"
+                    android:tint="#BAB7B7"/>
 
                 <!-- Kontainer Teks -->
                 <LinearLayout
@@ -74,7 +93,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginStart="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    >
 
                     <!-- Teks "DANGEROUS" -->
                     <TextView
@@ -104,10 +124,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_background"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -167,24 +188,27 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_background"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
 
                 <!-- Baris Ikon dan Teks -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
 
                     <!-- Ikon -->
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/eat" />
+                        android:src="@drawable/eat"
+                        android:tint="#BAB7B7"/>
 
                     <!-- Teks Food Recommendation -->
                     <TextView
@@ -225,10 +249,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_background"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -284,10 +309,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_background"
                 android:elevation="4dp"
                 android:padding="16dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"

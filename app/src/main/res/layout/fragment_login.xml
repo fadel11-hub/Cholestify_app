@@ -56,6 +56,6 @@
         android:text="Not Have Account? Sign Up Now"
         android:fontFamily="@font/poppins"
         android:textSize="10sp"
-        android:background="null"
+        android:background="@null"
         android:textColor="@color/black" />
 </LinearLayout>
