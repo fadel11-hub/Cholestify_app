@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Cholestify"
+        android:fontFamily="@font/poppins_bold"
         android:textColor="@color/green"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -45,5 +46,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Login"
+        android:fontFamily="@font/poppins_bold"
         app:cornerRadius="25dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Have Account? Sign Up Now"
+        android:fontFamily="@font/poppins"
+        android:textSize="10sp"
+        android:background="null"
+        android:textColor="@color/black" />
 </LinearLayout>
