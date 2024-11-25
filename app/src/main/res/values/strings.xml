@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cholestify app</string>
+    <string name="app_name">Cholestify</string>
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
     <string name="profile_picture">Profile Picture</string>
