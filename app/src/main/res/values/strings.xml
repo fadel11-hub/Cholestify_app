@@ -3,7 +3,6 @@
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
     <string name="profile_picture">Profile Picture</string>
-    profile_picture
 
     <!--    Profile-->
     <string name="first_name">What’s your first name?</string>
@@ -17,6 +16,7 @@
     <string name="weight">Weight</string>
     <string name="bmi">BMI</string>
     <string name="activity_factor">Select your activity factor</string>
+    <string name="back">Back</string>
 
     <!--    Update Profile-->
     <string name="update_profile">Update Profile</string>

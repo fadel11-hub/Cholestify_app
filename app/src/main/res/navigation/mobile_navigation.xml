@@ -17,5 +17,10 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/update_daily_food"
+        android:name="com.example.cholestifyapp.ui.updateDaily.UpdateDaily"
+        android:label="Update Daily Food"
+        tools:layout="@layout/fragment_update_daily" />
 
 </navigation>
