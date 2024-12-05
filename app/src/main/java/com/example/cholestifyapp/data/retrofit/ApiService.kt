@@ -8,11 +8,11 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("foods") // Sesuaikan endpoint dengan API Anda
+    @GET("food") // Sesuaikan endpoint dengan API Anda
     suspend fun getFoods(): Response<ResponseFood>
 
     companion object {
-        private const val BASE_URL = "https://cholestify-service-326196240933.asia-southeast2.run.app/food/" // Ganti dengan URL API Anda
+        private const val BASE_URL = "https://cholestify-service-326196240933.asia-southeast2.run.app/" // Ganti dengan URL API Anda
 
         fun create(): ApiService {
             return Retrofit.Builder()

@@ -1,36 +1,44 @@
 package com.example.cholestifyapp.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cholestifyapp.R
 import com.example.cholestifyapp.data.response.DataItem
+import com.example.cholestifyapp.databinding.ItemAddFoodBinding
 
-class FoodAdapter(private var foodList: List<DataItem?>) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
+class FoodAdapter(private val foodList: List<DataItem>, private val onItemClick: (DataItem) -> Unit) :
+    RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
-    class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvItemName: TextView = itemView.findViewById(R.id.tv_item_name)
-        val checkBox: CheckBox = itemView.findViewById(R.id.checkbox_item)
+    // Menyimpan daftar makanan yang diterima dari ViewModel
+    private var foods = foodList
+
+    // Mengupdate data makanan pada adapter
+    fun updateData(newFoods: List<DataItem>) {
+        foods = newFoods
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_add_food, parent, false)
-        return FoodViewHolder(view)
+        val binding = ItemAddFoodBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return FoodViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
-        val foodItem = foodList[position]
-        holder.tvItemName.text = foodItem?.food ?: "Unknown Food"
-        holder.checkBox.isChecked = false // Sesuaikan jika ada logika tambahan
+        val food = foods[position]
+        holder.bind(food)
     }
 
-    override fun getItemCount(): Int = foodList.size
+    override fun getItemCount(): Int = foods.size
 
-    fun updateData(newFoodList: List<DataItem?>) {
-        this.foodList = newFoodList
-        notifyDataSetChanged()
+    inner class FoodViewHolder(private val binding: ItemAddFoodBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(food: DataItem) {
+            binding.tvItemName.text = food.food // Mengambil nama makanan dari data dan mengikat ke TextView
+            binding.checkboxItem.setOnCheckedChangeListener { _, isChecked ->
+                // Bisa tambahkan aksi ketika checkbox dicentang (misalnya menyimpan status)
+            }
+            binding.root.setOnClickListener {
+                onItemClick(food) // Menangani klik pada item
+            }
+        }
     }
 }
