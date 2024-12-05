@@ -9,14 +9,15 @@
         android:name="com.example.cholestifyapp.ui.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
+        <!-- Aksi untuk tombol update_daily_food_btn -->
         <action
-            android:id="@+id/update_daily_food"
+            android:id="@+id/update_daily_food_btn"
             app:destination="@id/updateDailyFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/updateDailyFragment"
-        android:name="com.example.cholestifyapp.ui.updateDaily.UpdateDaily"
+        android:name="com.example.cholestifyapp.ui.updateDaily.UpdateDailyFragment"
         android:label="Update Daily"
         tools:layout="@layout/fragment_update_daily" />
 </navigation>

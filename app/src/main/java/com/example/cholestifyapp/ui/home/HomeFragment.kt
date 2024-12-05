@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.cholestifyapp.R
 import com.example.cholestifyapp.databinding.FragmentHomeBinding
@@ -23,8 +24,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         // Listener untuk tombol update_daily_food
-        binding.updateDailyFood.setOnClickListener {
-            findNavController().navigate(R.id.update_daily_food)
+        binding.updateDailyFoodBtn.setOnClickListener {
+            view?.let { v ->
+                Navigation.findNavController(v).navigate(R.id.update_daily_food_btn)
+            }
         }
 
         return binding.root

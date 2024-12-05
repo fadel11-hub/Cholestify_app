@@ -12,6 +12,7 @@
     <string name="gender">Select your gender</string>
 
     <!--    Personal Nutrition-->
+    <string name="update_daily">Update Daily Fppd</string>
     <string name="height">Height</string>
     <string name="weight">Weight</string>
     <string name="bmi">BMI</string>

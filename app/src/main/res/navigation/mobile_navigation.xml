@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/update_daily_food"
-        android:name="com.example.cholestifyapp.ui.updateDaily.UpdateDaily"
+        android:name="com.example.cholestifyapp.ui.updateDaily.UpdateDailyFragment"
         android:label="Update Daily Food"
         tools:layout="@layout/fragment_update_daily" />
 
